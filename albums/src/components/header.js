@@ -15,9 +15,6 @@ const Header = (props) => {
   );
 };
 
-//make the component aviable to other parts of the app
-export default Header;
-
 //styles
 const styles = {
   viewStyle: {
@@ -36,3 +33,6 @@ const styles = {
     fontSize: 20,
   }
 };
+
+//make the component aviable to other parts of the app
+export default Header;
