@@ -18,7 +18,7 @@ class App extends Component {
   });
 
   firebase.auth().onAuthStateChanged((user) => {
-    console.log(user);
+    console.log(firebase.auth().currentUser);
     if (user) {
       this.setState({ loggedIn: true });
     } else {
@@ -30,7 +30,11 @@ class App extends Component {
   renderContent() {
     switch (this.state.loggedIn) {
       case true:
-        return <Button>Log Out</Button>;
+        return (
+          <Button onPress={() => firebase.auth().signOut()}>
+            Log Out
+            </Button>
+          );
       case false:
           return <LoginForm />;
       default:
