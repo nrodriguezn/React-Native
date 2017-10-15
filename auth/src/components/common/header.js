@@ -35,4 +35,4 @@ const styles = {
 };
 
 //make the component aviable to other parts of the app
-export default Header;
+export { Header };
